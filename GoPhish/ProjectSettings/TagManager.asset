@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: writeEmailCanvas
+    uniqueID: 3553337339
+    locked: 0
   - name: Transition
     uniqueID: 2370200213
+    locked: 0
+  - name: Popup
+    uniqueID: 446531349
     locked: 0
