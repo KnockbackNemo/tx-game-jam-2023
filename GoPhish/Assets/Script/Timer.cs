@@ -7,18 +7,17 @@ using System;
 public class Timer : MonoBehaviour
 {
 
-bool timerActive = false;
+bool timerActive = true;
 float currentTime;
 public int startSeconds;
 public Text currentTimeText;
-public Text cookieCounterText;
-public int clickCount;
+public bool win = false;
 
     // Start is called before the first frame update
     void Start()
     {
         currentTime=startSeconds;
-        clickCount = 0;
+       
         
     }
 
@@ -35,26 +34,18 @@ public int clickCount;
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.Seconds.ToString();
-        cookieCounterText.text = clickCount.ToString();
+
         
     }
 
-    public void addClickCount() {
-        if (clickCount < 42) {
-            clickCount++;
-        }
-    }
-
-    public void StartTimer() {
-        timerActive = true;
-    }
+  
 
     public void StopTimer() {
         timerActive = false;
     }
 
     public void timerEnd() {
-        if (clickCount == 42) {
+        if (win) {
             // Win condition
             Debug.Log("Successfully rejected cookies");
         } else {
