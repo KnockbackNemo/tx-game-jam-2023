@@ -11,8 +11,14 @@ public class PopUpSystem : MonoBehaviour
 
     public void PopUp(string text) {
         popUpBox.SetActive(true);
-        popUpText.text = text; 
+        //popUpText.text = text; -M
         animator.SetTrigger("pop");
+        Debug.Log("PopUp ran");
+
+        // if (popUpBox.activeInHierarchy) {
+        //     animator.SetTrigger("close");
+        //     Debug.Log("PopUp ran");
+        // }
     }
 
 }
