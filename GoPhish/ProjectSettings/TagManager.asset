@@ -11,6 +11,7 @@ TagManager:
   - 
   - Water
   - UI
+  - 
   - layer 6
   - 
   - 
@@ -38,7 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Popup
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: writeEmailCanvas
+    uniqueID: 3553337339
+    locked: 0
+  - name: Transition
+    uniqueID: 2370200213
+    locked: 0
+  - name: PopupM
+    uniqueID: 446531349
+  - name: PopupA
     uniqueID: 3171768013
     locked: 0
   - name: bg
