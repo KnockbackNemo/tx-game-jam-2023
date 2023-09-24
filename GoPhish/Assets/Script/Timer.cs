@@ -7,6 +7,8 @@ using System;
 public class Timer : MonoBehaviour
 {
 
+public GameObject loseText;
+public GameObject winText;
 bool timerActive = true;
 float currentTime;
 public int startSeconds;
@@ -17,6 +19,8 @@ public bool win = false;
     void Start()
     {
         currentTime=startSeconds;
+        loseText.SetActive(false);
+        winText.SetActive(false);
        
         
     }
@@ -30,6 +34,7 @@ public bool win = false;
                 timerActive = false;
                 Debug.Log("Timer expired.");
                 timerEnd();
+               
             }
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
@@ -48,9 +53,11 @@ public bool win = false;
         if (win) {
             // Win condition
             Debug.Log("Successfully rejected cookies");
+            winText.SetActive(true);
         } else {
             // Lose condition
             Debug.Log("Did not reject all cookies");
+             loseText.SetActive(true);
         }
     }
 }
